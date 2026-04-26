@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://watcho-price-compare-api.onrender.com";
 const RESULTS_STORAGE_KEY = "lastResults";
 const REF_STORAGE_KEY = "lastRef";
 const SORT_STORAGE_KEY = "selectedSort";

@@ -12,7 +12,7 @@
     "tabs"
   ],
   "host_permissions": [
-    "http://localhost:3000/*",
+    "https://watcho-price-compare-api.onrender.com/*",
     "https://www.watcho.co.uk/*",
     "https://www.sarahlayton.co.uk/*",
     "https://www.fraserhart.co.uk/*",

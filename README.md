@@ -1,6 +1,6 @@
 # WATCHO Competitor Price Comparison
 
-This project includes a Manifest V3 Chrome extension and a Node.js + Express backend for UK watch price comparison. The extension accepts a watch reference number, calls the local backend, and renders WATCHO plus competitor matches in a comparison table.
+This project includes a Manifest V3 Chrome extension and a Node.js + Express backend for UK watch price comparison. The extension accepts a watch reference number, calls the deployed Render backend, and renders WATCHO plus competitor matches in a comparison table.
 
 ## Project Structure
 
@@ -127,6 +127,14 @@ curl "http://localhost:3000/api/compare-watch?ref=010-03198-40&debug=true"
 3. Click `Load unpacked`
 4. Select `/Users/sreekanthreddy/Documents/Codex/2026-04-26/build-a-chrome-extension-backend-from/extension`
 5. Open the extension popup and search a reference
+
+The extension calls:
+
+- `https://watcho-price-compare-api.onrender.com/api/compare-watch?ref=...`
+
+Optional local backend development:
+
+- The backend can still be run locally at `http://localhost:3000` for backend testing, but the extension is configured to use the deployed Render API.
 
 ## API Response Shape
 
