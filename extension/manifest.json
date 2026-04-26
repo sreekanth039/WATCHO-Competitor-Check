@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "WATCHO Price Compare",
+  "version": "1.0.0",
+  "description": "Compare WATCHO watch prices against selected UK competitors.",
+  "action": {
+    "default_title": "WATCHO Price Compare",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "https://www.watcho.co.uk/*",
+    "https://www.sarahlayton.co.uk/*",
+    "https://www.fraserhart.co.uk/*",
+    "https://www.beaverbrooks.co.uk/*",
+    "https://www.wallaceallan.co.uk/*",
+    "https://www.francisandgaye.co.uk/*",
+    "https://www.hillierjewellers.co.uk/*",
+    "https://www.goldsmiths.co.uk/*",
+    "https://www.ernestjones.co.uk/*",
+    "https://www.houseoffraser.co.uk/*"
+  ]
+}

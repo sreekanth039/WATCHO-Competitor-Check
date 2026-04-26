@@ -1,0 +1,296 @@
+:root {
+  color-scheme: light;
+  --bg: #f4efe7;
+  --panel: #fffaf3;
+  --panel-strong: #ffffff;
+  --text: #1f2933;
+  --muted: #667085;
+  --border: #e7d8c6;
+  --accent: #8f4f22;
+  --accent-soft: #f5d4bc;
+  --good: #0a7b52;
+  --good-soft: #dff6ea;
+  --bad: #b54708;
+  --bad-soft: #ffead5;
+  --shadow: 0 14px 30px rgba(76, 48, 29, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 720px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 212, 160, 0.45), transparent 40%),
+    linear-gradient(180deg, #f8f1e7 0%, var(--bg) 100%);
+  color: var(--text);
+  font: 14px/1.45 "Segoe UI", Arial, sans-serif;
+}
+
+.popup {
+  padding: 18px;
+}
+
+.hero,
+.watcho-card,
+table,
+.status {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.subtle,
+.meta-row,
+.watcho-link,
+.empty-cell {
+  color: var(--muted);
+}
+
+.search-form {
+  margin-bottom: 12px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.search-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+input,
+button,
+select {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font: inherit;
+}
+
+input {
+  padding: 12px 14px;
+  background: var(--panel-strong);
+}
+
+button {
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #a95c25 0%, #7c421d 100%);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+select {
+  padding: 10px 12px;
+  background: var(--panel-strong);
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.status {
+  display: none;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.status.visible {
+  display: block;
+}
+
+.status.error {
+  border-color: #efc9c1;
+  background: #fff3f0;
+  color: #8b2e1f;
+}
+
+.status.loading {
+  color: var(--accent);
+}
+
+.hidden {
+  display: none;
+}
+
+.watcho-card {
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.watcho-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.watcho-price-wrap {
+  text-align: right;
+}
+
+.watcho-price-wrap strong {
+  display: block;
+  font-size: 24px;
+}
+
+.pill {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.secondary-button {
+  padding: 10px 14px;
+  background: #f3eadf;
+  color: var(--accent);
+  border: 1px solid var(--border);
+}
+
+.price-warning {
+  display: inline-block;
+  margin-top: 6px;
+  color: #8a5a00;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.assist-note {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 2px 8px;
+  font-size: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+thead {
+  background: #fbf4ec;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge-high {
+  color: var(--good);
+  background: var(--good-soft);
+}
+
+.badge-medium {
+  color: #8a5a00;
+  background: #fff1d6;
+}
+
+.badge-low {
+  color: var(--bad);
+  background: var(--bad-soft);
+}
+
+.price-up {
+  color: var(--bad);
+  background: var(--bad-soft);
+}
+
+.price-down {
+  color: var(--good);
+  background: var(--good-soft);
+}
+
+.open-link {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  background: #f8efe4;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.open-link:hover {
+  background: #f3e5d5;
+}

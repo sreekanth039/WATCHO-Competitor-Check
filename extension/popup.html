@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WATCHO Price Compare</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="hero">
+        <p class="eyebrow">WATCHO Competitor Check</p>
+        <h1>Price comparison</h1>
+        <p class="subtle">Paste a reference number to compare WATCHO against UK competitors.</p>
+      </header>
+
+      <form id="search-form" class="search-form">
+        <label class="label" for="ref-input">Watch reference number</label>
+        <div class="search-row">
+          <input
+            id="ref-input"
+            name="ref"
+            type="text"
+            placeholder="010-03198-01"
+            autocomplete="off"
+            required
+          />
+          <button id="search-button" type="submit">Search</button>
+        </div>
+      </form>
+
+      <div class="toolbar">
+        <div class="toolbar-copy">
+          <span id="last-search-label" class="subtle">No saved search yet</span>
+        </div>
+        <div class="toolbar-actions">
+          <label class="sort-label" for="sort-select">Sort</label>
+          <select id="sort-select">
+            <option value="lowest-price">Lowest price first</option>
+            <option value="highest-price">Highest price first</option>
+            <option value="name-az">Competitor name A-Z</option>
+            <option value="confidence">Confidence high-low</option>
+            <option value="difference">Difference vs WATCHO</option>
+          </select>
+          <button id="clear-button" type="button" class="secondary-button">Clear results</button>
+        </div>
+      </div>
+
+      <section id="status" class="status" aria-live="polite"></section>
+
+      <section id="results" class="results hidden">
+        <div class="watcho-card">
+          <div class="watcho-header">
+            <div>
+              <p class="eyebrow">WATCHO</p>
+              <h2 id="watcho-title">No result found</h2>
+            </div>
+            <div class="watcho-price-wrap">
+              <strong id="watcho-price">-</strong>
+              <span id="watcho-confidence" class="pill">Confidence: -</span>
+              <span id="watcho-warning" class="price-warning hidden">Price needs checking</span>
+            </div>
+          </div>
+          <p id="watcho-url" class="watcho-link"></p>
+        </div>
+
+        <div class="meta-row">
+          <span id="ref-display"></span>
+          <span id="last-checked"></span>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Competitor</th>
+              <th>Status</th>
+              <th>Price</th>
+              <th>Diff vs WATCHO</th>
+              <th>Confidence</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody id="results-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
